@@ -1,0 +1,29 @@
+# small_data is set to False, show_sd_internals is set to True
+
+[ljl2@utopia solution] python showdown_time.py
+What college-info file in directory "data" should I use?
+1: small_test1.txt
+2: small_cornell_and_suny_test.txt
+3: a2c_census2020_processed.txt
+other: some other file in the "data" directory
+Default is 1.
+
+Your choice? 1
+Here are the available college_names according to your menu_names() function.
+0: A    1: B    2: D    3: E
+Pick two numbers from the list of college names, separated by spaces (or 'q' to quit): 0 3
+
+FYI, here is the internal showdown data
+A vs. E
+accepted at both: 11,20
+accepted at both, enrolled at A: 11,20
+accepted at both, enrolled at E:
+
+A vs. E
+Number of students accepted at both: 2
+Number of such students who enrolled at one of them: 2
+% who chose A over E: 100.0
+% who chose E over A: 0.0
+
+One more round? Pick two numbers from the list of college names, separated by spaces (or 'q' to quit): q
+Bye for now!

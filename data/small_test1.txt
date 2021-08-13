@@ -1,0 +1,4 @@
+11  >> A : Accepted ## B : Rejected ## D : Accepted ## E : Accepted ## enr : A
+10  >> A : Accepted ## B : Rejected ## D : Accepted ## enr : D
+20  >> A : Accepted ## B : Rejected ## D: Accepted ## E : Accepted ## enr : A
+21  >> A : Wait-listed ## E : Accepted ## enr : E

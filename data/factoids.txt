@@ -1,0 +1,19 @@
+
+%%%% some random facts
+
+# where people ended up enrolling
+[ljl2@ladybug9 data] ./clean-data.sh | sed 's/.*enr : \(.*\)/\1/g' | sort | uniq -c | sort -k1r | head
+ 133 UC-Berkeley
+ 131 A_college_or_university_not_listed.
+ 108 UC-Los_Angeles
+  91 Harvard_U
+  88 Stanford_U
+  87 Cornell_U
+  85 UPennsylvania
+  74 UMichigan-Ann_Arbor
+  70 New_York_U
+  69 Yale_U
+
+# uniq "colleges"
+[ljl2@ladybug9 data] cat  a2c_census2020_processed.csv  | sed 's/.*enr : \(.*\)/\1/g' | sort | uniq | wc -l
+     192

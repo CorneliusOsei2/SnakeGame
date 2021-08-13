@@ -1,0 +1,41 @@
+# small_test is False, show_sd_internals is True
+
+[ljl2@utopia solution] python showdown_time.py
+What college-info file in directory "data" should I use?
+1: small_test1.txt
+2: small_cornell_and_suny_test.txt
+3: a2c_census2020_processed.txt
+other: some other file in the "data" directory
+Default is 1.
+
+Your choice? 2
+Here are the available college_names according to your menu_names() function.
+0: Cornell_U    1: SUNYs    2: Brown_U  3: Northeastern_U   4: Princeton_U  5: UMichigan-Ann_Arbor  6: New_York_U   7: Columbia_U   8: Harvard_U    9: Massachusetts_Institute_of_Technology    10: Yale_U  11: UPennsylvania   12: Purdue_U    13: UPittsburgh 14: UTexas-Austin   15: Amherst_College 16: Vassar_College  17: Wesleyan_U  18: Williams_College    19: Fordham_U   20: UDelaware   21: Carnegie_Mellon_U   22: Dartmouth_College   23: Stanford_U  24: Swarthmore_College  25: Johns_Hopkins_U 26: UMassachusetts-Amherst  27: UC-Berkeley 28: UC-Davis    29: UC-Los_Angeles  30: UC-San_Diego    31: Northwestern_U  32: Georgia_Institute_of_Technology 33: UFlorida    34: UTexas_at_Dallas    35: Colgate_U   36: Hamilton_College    37: McGill_U    38: Rutgers_U   39: Temple_U40: Haverford_College   41: Tufts_U 42: UChicago    43: USouthern_California    44: Boston_College  45: Boston_U    46: Rochester_Institute_of_Technology   47: UConnecticut    48: Cal_Poly_Pomona 49: California_Polytechnic_State_U-San_Luis_Obsipo  50: San_Jose_State_U    51: Santa_Clara_U   52: The_Ohio_State_U    53: UC-Irvine   54: UC-Santa_Barbara    55: UC-Santa_Cruz   56: UMaryland-College_Park  57: The_Cooper_Union_for_the_Advancement_of_Science_and_Art 58: American_U  59: UNorth_Carolina_at_Chapel_Hill  60: UVirginia   61: Duke_U  62: Georgetown_U    63: Skidmore_College    64: Trinity_College 65: U_at_Buffalo    66: URochester
+Pick two numbers from the list of college names, separated by spaces (or 'q' to quit): 0 1
+
+FYI, here is the internal showdown data
+Cornell_U vs. SUNYs
+accepted at both: 470,83,157,242
+accepted at both, enrolled at Cornell_U: 83,157,242
+accepted at both, enrolled at SUNYs:
+
+Cornell_U vs. SUNYs
+Number of students accepted at both: 4
+Number of such students who enrolled at one of them: 3
+% who chose Cornell_U over SUNYs: 100.0
+% who chose SUNYs over Cornell_U: 0.0
+
+One more round? Pick two numbers from the list of college names, separated by spaces (or 'q' to quit): 1 4
+
+FYI, here is the internal showdown data
+SUNYs vs. Princeton_U
+accepted at both:
+accepted at both, enrolled at SUNYs:
+accepted at both, enrolled at Princeton_U:
+
+SUNYs vs. Princeton_U
+Number of students accepted at both: 0
+Number of such students who enrolled at one of them: 0
+
+One more round? Pick two numbers from the list of college names, separated by spaces (or 'q' to quit): q
+Bye for now!

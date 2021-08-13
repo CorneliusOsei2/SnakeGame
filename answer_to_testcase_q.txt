@@ -1,0 +1,40 @@
+# student-test-answer.txt
+# PUT YOUR NETID(S) HERE
+# Sources/people consulted: FILL IN OR WRITE "NONE"
+# PUT DATE YOU COMPLETED THIS HERE
+# Skeleton by Prof. Lillian Lee (LJL2), Mar 19, 2021
+
+Give another two college numbers, separated with spaces
+(or 'q' to quit): 1 2
+
+FYI, here is the internal showdown data
+A vs. D
+accepted at both: ???
+# BEGIN REMOVE
+10,11,20
+# END REMOVE
+accepted at both, enrolled at A: ???
+# BEGIN REMOVE
+11,20
+# END REMOVE
+accepted at both, enrolled at D: ???
+# BEGIN REMOVE
+10
+# END REMOVE
+A vs. D
+Number of students accepted at both: ???
+# BEGIN REMOVE
+3
+# END REMOVE
+Number of such students who enrolled at one of them: ???
+# BEGIN REMOVE
+3
+# END REMOVE
+% who chose A over D: ???
+# BEGIN REMOVE
+66.67
+# END REMOVE
+% who chose D over A: ???
+# BEGIN REMOVE
+33.33
+# END REMOVE
