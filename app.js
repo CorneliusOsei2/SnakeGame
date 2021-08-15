@@ -12,8 +12,8 @@ class Snake{
     }
 }
 
+// Utils
 let speed = 10;
-
 let tileCount = 20;
 let tileSize = canvas.width / tileCount - 2;
 
@@ -27,6 +27,10 @@ let tailLength= 2
 let fruitX = 5;
 let fruitY = 5;
 
+// Sound Effects
+const swallow = new Audio('./media/swallow.mp3')
+const gamePlay= new Audio('./media/gamePlay.mp3')
+
 // Snake movement
 // Controlled by Keyboard
 let xVelocity = 0;
@@ -37,6 +41,7 @@ let score = 0;
 
 const drawGame = () => {
     
+    gamePlay.play();
     changeSnakePosition();
     hitWall();
 
@@ -55,7 +60,7 @@ const drawGame = () => {
 }
 
 const clearScreen = () => {
-    ctx.fillStyle = 'rgb(14,14,14)'
+    ctx.fillStyle = 'black';
     ctx.fillRect(0, 0, canvas.width, canvas.height)
 }
 
@@ -101,11 +106,20 @@ const isGameOver = () => {
         part = snakeParts[i];
 
         if (headX === part.x && headY === part.y){
-            ctx.fillStyle = 'red'
-            ctx.font = '28px Cambria'
-            ctx.fillText('Game Over 💥', canvas.width/2 -40, canvas.width/2 -40)
+            ctx.fillStyle = "white";
+            ctx.font = "50px Verdana";
+
+            var gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
+            gradient.addColorStop("0", " magenta");
+            gradient.addColorStop("0.5", "blue");
+            gradient.addColorStop("1.0", "red");
+            // Fill with gradient
+            ctx.fillStyle = gradient;
+
+            ctx.fillText("Game Over!", canvas.width / 6.5, canvas.height / 2);
             return true;
-        }
+
+        }        
     }
 
 }
@@ -116,6 +130,7 @@ const checkFruitCollision = () => {
         fruitY = Math.floor(Math.random() * tileCount)
         tailLength++;
         score++;
+        swallow.play()
     }
 
 }
@@ -150,7 +165,7 @@ const drawFruit = () => {
 
 const keyMovement = (event) => {
     // Go up
-    if (event.keyCode == 38) {
+    if (event.keyCode == 38 || event.keyCode == 87) {
         if (yVelocity == 1) {
             return
         }
@@ -159,7 +174,7 @@ const keyMovement = (event) => {
     }
 
     // Go down
-    if (event.keyCode == 40) {
+    if (event.keyCode == 40 || event.keyCode == 83) {
         if (yVelocity == -1) {
             return
         }
@@ -168,7 +183,7 @@ const keyMovement = (event) => {
     }
 
     // Go left
-    if (event.keyCode == 37) {
+    if (event.keyCode == 37 || event.keyCode == 65) {
         if (xVelocity == 1) {
             return
         }
@@ -177,7 +192,7 @@ const keyMovement = (event) => {
     }
 
     // Go right
-    if (event.keyCode == 39) {
+    if (event.keyCode == 39 || event.keyCode == 68) {
         if (xVelocity == -1) {
             return
         }
@@ -187,9 +202,8 @@ const keyMovement = (event) => {
 }
 
 const drawScore = () => {
-    ctx.fillStyle = 'white'
-    ctx.font = '18px serif';
-    ctx.fillText('Score: ' + score, canvas.width/2 -40, 15)
+
+    document.getElementById("score").innerHTML = score;
 }
 
 document.body.addEventListener('keydown', keyMovement)
