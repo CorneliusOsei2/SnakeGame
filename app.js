@@ -13,6 +13,10 @@ let tileSize = canvas.width / tileCount - 2;
 let headX = 10;
 let headY = 10;
 
+// Fruit Properties
+let fruitX = 5;
+let fruitY = 5;
+
 // Snake movement
 // Controlled by Keyboard
 let xVelocity = 0;
@@ -21,6 +25,8 @@ let yVelocity = 0;
 const drawGame = () => {
     clearScreen();
     changeSnakePosition();
+    checkFruitCollision();
+    drawFruit();
     drawSnake();
     setTimeout(drawGame, 1000 / speed)
 }
@@ -36,9 +42,23 @@ const drawSnake = () => {
     ctx.fillRect(headX * tileCount, headY * tileCount, tileCount, tileCount)
 }
 
+const drawFruit = () => {
+    ctx.fillStyle = 'red'
+    ctx.fillRect(fruitX * tileCount, fruitY * tileCount, tileSize, tileCount)
+}
+
+
 const changeSnakePosition = () => {
     headX = headX + xVelocity;
     headY = headY + yVelocity;
+}
+
+const checkFruitCollision = () => {
+    if (fruitX == headX && fruitY == headY){
+        fruitX = Math.floor(Math.random() * tileCount)
+        fruitY = Math.floor(Math.random() * tileCount)
+    }
+
 }
 
 
