@@ -106,14 +106,8 @@ const isGameOver = () => {
         part = snakeParts[i];
 
         if (headX === part.x && headY === part.y){
-            ctx.fillStyle = "white";
+            ctx.fillStyle = "red";
             ctx.font = "40px Georgia";
-
-            var gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
-            gradient.addColorStop("0", "red");
-            
-            // Fill with gradient
-            ctx.fillStyle = gradient;
 
             ctx.fillText("Game Over!", canvas.width / 6.5, canvas.height / 2);
             return true;
