@@ -115,7 +115,7 @@ const isGameOver = () => {
             // Fill with gradient
             ctx.fillStyle = gradient;
 
-            ctx.fillText("Game Over!!", canvas.width / 6.5, canvas.height / 2);
+            ctx.fillText("Game Over!", canvas.width / 6.5, canvas.height / 2);
             return true;
 
         }        
