@@ -51,8 +51,8 @@ let yVelocity = 0;
 
 // Score
 let score = 0;
-let docRef = db.collection("scores").doc("highest_score");
-let currentScore = docRef.score
+// let docRef = db.collection("scores").doc("highest_score");
+// let currentScore = docRef.score
 
 const drawGame = () => {
     
