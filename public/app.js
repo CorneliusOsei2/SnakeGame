@@ -38,6 +38,8 @@ let yVelocity = 0;
 
 // Score
 let score = 0;
+let docRef = db.collection("scores").doc("highest_score");
+let currentScore = docRef.score
 
 alert('Click the game pad or move the "ASDW" or arrow keys to start!');
 
@@ -108,6 +110,17 @@ const isGameOver = () => {
         part = snakeParts[i];
 
         if (headX === part.x && headY === part.y){
+            // Updating highest score
+            let new_score = score;
+
+            if (new_score > currentScore){
+                db.collection("scores").doc("highest_score").update({
+                    name: new_name,
+                    score: new_score
+                });
+            }
+
+
             ctx.fillStyle = "red";
             ctx.font = "40px Georgia";
 
@@ -197,11 +210,14 @@ const keyMovement = (event) => {
 }
 
 const drawScore = () => {
-
+    document.getElementById('highest_score').innerHTML = currentScore;
     document.getElementById("score").innerHTML = score;
 }
 
 document.body.addEventListener('keydown', keyMovement)
+
+
+
 
 
 drawGame();
