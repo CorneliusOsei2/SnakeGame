@@ -39,6 +39,8 @@ let yVelocity = 0;
 // Score
 let score = 0;
 
+alert('Click the game pad or move the "ASDW" or arrow keys to start!');
+
 const drawGame = () => {
     
     gamePlay.play();
