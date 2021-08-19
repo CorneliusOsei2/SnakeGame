@@ -1,17 +1,3 @@
-// const firebase = require("firebase");
-// require('dotenv').config()
-// // Required for side-effects
-// require("firebase/firestore");
-
-// // Initialize Cloud Firestore through Firebase
-// firebase.initializeApp({
-//     apiKey: process.env.API_KEY,
-//     authDomain: process.env.AUTH_DOMAIN,
-//     projectId: process.env.PROJECT_ID,
-//   });
-  
-// let db = firebase.firestore();
-
 const canvas = document.getElementById('game')
 
 // Get context from Canvas to draw on the screen
@@ -51,8 +37,6 @@ let yVelocity = 0;
 
 // Score
 let score = 0;
-// let docRef = db.collection("scores").doc("highest_score");
-// let currentScore = docRef.score
 
 const drawGame = () => {
     
@@ -121,17 +105,7 @@ const isGameOver = () => {
         part = snakeParts[i];
 
         if (headX === part.x && headY === part.y){
-            // Updating highest score
-            // let new_score = score;
-
-            // if (new_score > currentScore){
-            //     db.collection("scores").doc("highest_score").update({
-            //         name: new_name,
-            //         score: new_score
-            //     });
-            // }
-
-
+           
             ctx.fillStyle = "red";
             ctx.font = "40px Georgia";
 
@@ -221,7 +195,6 @@ const keyMovement = (event) => {
 }
 
 const drawScore = () => {
-    // document.getElementById('highest_score').innerHTML = currentScore;
     document.getElementById("score").innerHTML = score;
 }
 
