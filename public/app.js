@@ -149,7 +149,7 @@ const drawSnake = () => {
 }
 
 const drawFruit = () => {
-    ctx.fillStyle = 'red';
+    ctx.fillStyle = 'blue';
 
     ctx.fillRect(fruitX * tileCount, fruitY * tileCount, tileSize, tileCount)
 }
