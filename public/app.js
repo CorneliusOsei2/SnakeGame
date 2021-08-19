@@ -28,8 +28,8 @@ let fruitX = 5;
 let fruitY = 5;
 
 // Sound Effects
-const swallow = new Audio('../media/swallow.mp3')
-const gamePlay= new Audio('../media/gamePlay.mp3')
+const swallow = new Audio('./media/swallow.mp3')
+const gamePlay= new Audio('./media/gamePlay.mp3')
 
 // Snake movement
 // Controlled by Keyboard
