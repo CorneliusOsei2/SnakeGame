@@ -1,16 +1,16 @@
-const firebase = require("firebase");
-require('dotenv').config()
-// Required for side-effects
-require("firebase/firestore");
+// const firebase = require("firebase");
+// require('dotenv').config()
+// // Required for side-effects
+// require("firebase/firestore");
 
-// Initialize Cloud Firestore through Firebase
-firebase.initializeApp({
-    apiKey: process.env.API_KEY,
-    authDomain: process.env.AUTH_DOMAIN,
-    projectId: process.env.PROJECT_ID,
-  });
+// // Initialize Cloud Firestore through Firebase
+// firebase.initializeApp({
+//     apiKey: process.env.API_KEY,
+//     authDomain: process.env.AUTH_DOMAIN,
+//     projectId: process.env.PROJECT_ID,
+//   });
   
-let db = firebase.firestore();
+// let db = firebase.firestore();
 
 const canvas = document.getElementById('game')
 
