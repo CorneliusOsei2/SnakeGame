@@ -1,6 +1,3 @@
-
-const canvas = document.getElementById('game')
-
 const firebase = require("firebase");
 require('dotenv').config()
 // Required for side-effects
@@ -13,7 +10,9 @@ firebase.initializeApp({
     projectId: process.env.PROJECT_ID,
   });
   
-  var db = firebase.firestore();
+let db = firebase.firestore();
+
+const canvas = document.getElementById('game')
 
 // Get context from Canvas to draw on the screen
 const ctx = canvas.getContext('2d')

@@ -26,6 +26,11 @@ div{
     color: red;
 }
 
+#highest_score{
+    color: blue;
+    font-weight: bold;
+}
+
 span{
     color: green;
     font-family: Georgia, Times, 'Times New Roman',;
