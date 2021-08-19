@@ -27,7 +27,7 @@ let tailLength= 2
 let fruitX = 5;
 let fruitY = 5;
 
-// Sound Effects
+// Sound Effects Added
 const swallow = new Audio('./media/swallow.mp3')
 const gamePlay= new Audio('./media/gamePlay.mp3')
 
