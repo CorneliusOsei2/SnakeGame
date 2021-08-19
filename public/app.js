@@ -6,7 +6,6 @@ require('dotenv').config()
 // Required for side-effects
 require("firebase/firestore");
 
-
 // Initialize Cloud Firestore through Firebase
 firebase.initializeApp({
     apiKey: process.env.API_KEY,
